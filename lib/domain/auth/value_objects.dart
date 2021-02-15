@@ -3,15 +3,15 @@ import 'package:blocNote_DDD/domain/core/value_objects.dart';
 import 'package:blocNote_DDD/domain/core/value_validator.dart';
 import 'package:dartz/dartz.dart';
 
-class EmailAdress extends ValueObject<String> {
+class EmailAddress extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
-  factory EmailAdress(String input) {
+  factory EmailAddress(String input) {
     assert(input != null);
-    return EmailAdress._(validatedEmailAdress(input));
+    return EmailAddress._(validatedEmailAdress(input));
   }
 
-  const EmailAdress._(this.value);
+  const EmailAddress._(this.value);
 }
 
 class Password extends ValueObject<String> {
